@@ -7,6 +7,18 @@ https://code.google.com/p/u8glib/
 
 
 // EXAMPLE
+
+// pins 
+// OLED Display
+#define OLED_MOSI  1
+#define OLED_CLK   2
+#define OLED_DC    4
+#define OLED_CS    3
+#define OLED_RESET 5
+
+// driver
+U8GLIB_SSD1306_128X64 display(OLED_CLK, OLED_MOSI, OLED_CS, OLED_DC, OLED_RESET);
+
 // Gauges
 pgfx_HBAR fbar = pgfx_HBAR( 0, 0,20,64,"FUEL",display);
 pgfx_HBAR mbar = pgfx_HBAR(26, 0,20,64,"MONO",display);
