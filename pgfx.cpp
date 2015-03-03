@@ -13,7 +13,7 @@ pgfx_HBAR::pgfx_HBAR(int x, int y, int w, int h, char * name, U8GLIB_SSD1306_128
 void pgfx_HBAR::update(float value, float max)
 {
 
-  _display->drawStr(_x, _y+8, _name);
+  _display->drawStr(_x, _y, _name);
   // _display->setTextSize(1);
   // _display->setTextColor(WHITE);
   _display->drawRFrame(_x, _y+16, _width, _height-16, 4);
@@ -28,7 +28,7 @@ void pgfx_HBAR::update(float value, float max)
 
 void pgfx_HBAR::update(float v1, float m1, float v2, float m2)
 {
-  _display->drawStr(_x, _y+8, _name);
+  _display->drawStr(_x, _y, _name);
 
   // _display->setTextSize(1);
   // _display->setTextColor(WHITE);
