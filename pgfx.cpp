@@ -17,9 +17,9 @@ void pgfx_HBAR::update(float value, float max)
   // _display->setTextSize(1);
   // _display->setTextColor(WHITE);
   _display->drawRFrame(_x, _y+16, _width, _height-16, 4);
-  if (max >0 && value > 0) {
-  	int fp = (value / max) * (_height-20);
-  	_display->drawRBox(_x+2, _y+18 + ((_height-20) - fp), _width-4, fp, 4);
+  if (max >0 && value > 1) {
+  	unsigned int fp = (value / max) * (_height-20);
+  	_display->drawBox(_x+2, _y+18 + ((_height-20) - fp), _width-4, fp);
   }
   // _display->setCursor(_x,_y);
   // _display->println(_name);
@@ -33,13 +33,13 @@ void pgfx_HBAR::update(float v1, float m1, float v2, float m2)
   // _display->setTextSize(1);
   // _display->setTextColor(WHITE);
   _display->drawRFrame(_x, _y+16, _width, _height-16, 4);
-  if (m1 > 0 && v1 > 0) {
-  	int fp1 = (v1 / m1) * (_height-20);
-  	_display->drawRBox(_x+2, _y+18 + ((_height-20) - fp1), (_width/2)-3, fp1, 2);
+  if (m1 > 0 && v1 > 1) {
+  	unsigned int fp1 = (v1 / m1) * (_height-20);
+  	_display->drawBox(_x+2, _y+18 + ((_height-20) - fp1), (_width/2)-3, fp1);
   }
-  if (m2 > 0 && v2 > 0) {
-  	int fp2 = (v2 / m2) * (_height-20);
-  	_display->drawRBox(_x+(_width/2)+1, _y+18 + ((_height-20) - fp2), (_width/2)-3, fp2, 2);
+  if (m2 > 0 && v2 > 1) {
+  	unsigned int fp2 = (v2 / m2) * (_height-20);
+  	_display->drawBox(_x+(_width/2)+1, _y+18 + ((_height-20) - fp2), (_width/2)-3, fp2);
   }
   // _display->setCursor(_x,_y);
   // _display->println(_name);
