@@ -1,14 +1,21 @@
 #include "pgfx.h"
 
-pgfx_HBAR::pgfx_HBAR(int x, int y, int w, int h, char * name, U8GLIB_SSD1306_128X64 & display)
-{
-  _x = x;
-  _y = y;
-  _width = w;
-  _height = h;
-  _display = & display;
-  _name = name;
-}
+// pgfx_HBAR::pgfx_HBAR(int x, int y, int w, int h, char * name, U8GLIB_SSD1306_128X64 & display)
+// {
+//   _x = x;
+//   _y = y;
+//   _width = w;
+//   _height = h;
+//   _display = & display;
+//   _name = name;
+// }
+
+
+/*
+
+  HBAR
+
+*/
 
 void pgfx_HBAR::update(float value, float max)
 {
@@ -35,6 +42,13 @@ void pgfx_HBAR::update(float v1, float m1, float v2, float m2)
   	unsigned int fp2 = (v2 / m2) * (_height-20);
   	_display->drawBox(_x+(_width/2)+1, _y+18 + ((_height-20) - fp2), (_width/2)-3, fp2);
   }
-
+  
 }
- 
+
+/*
+
+  BUTTON
+
+*/
+
+
